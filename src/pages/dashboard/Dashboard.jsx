@@ -11,7 +11,7 @@ function Dashboard() {
 
         <div className="bg-[#858597] w-[50px] h-[50px] rounded-full "></div>
 
-        <div className="absolute bottom-[-25%] left-[10%] mt-[20px] bg-white w-[350px] h-[100px] shadow-md rounded-md flex flex-col justify-center items-center">
+        <div className="absolute -bottom-[50px]  left-1/2 transform -translate-x-1/2 mt-[20px] bg-white w-[350px] h-[100px] shadow-md rounded-md flex flex-col justify-center items-center">
           <div className="flex justify-between w-full px-3 pt-3">
             <div>
               <h1 className="text-[#858597] text-[12px]">Learned today</h1>

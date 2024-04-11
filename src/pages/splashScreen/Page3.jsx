@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Ilustration3 from "../../assets/illustration3.png";
 import Button from "../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { ChevronDoubleLeft } from "../../components/icons";
 
 function Page3() {
