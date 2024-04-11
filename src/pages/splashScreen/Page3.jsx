@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Ilustration3 from "../../assets/illustration3.png";
 import Button from "../../components/Button/Button";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { ChevronDoubleLeft } from "../../components/icons";
 
 function Page3() {
   const navigate = useNavigate();
+  const [showIconLeft, setShowIconLeft] = useState(true);
+
+  useEffect(() => {
+    // Mengatur timer untuk mengubah showDiv menjadi false setelah 3 detik
+    const timer = setTimeout(() => {
+      setShowIconLeft(false);
+    }, 5000);
+
+    // Membersihkan timer saat komponen dilepas
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <div className="w-full flex justify-center items-center duration-300 transition-all h-screen">
+    <div className="w-full flex justify-center items-center duration-300 transition-all h-screen relative">
       <div className="w-full">
-        <div className="w-full flex justify-end pb-5 pr-8">
-          <button className="border-none outline-none text-[#858597]">
-            Skip
-          </button>
-        </div>
 
         <div className="w-full flex flex-col gap-5 justify-center items-center select-none ">
           <img
@@ -51,6 +59,12 @@ function Page3() {
           </div>
         </div>
       </div>
+
+      {showIconLeft && (
+        <div className="absolute left-0 top-[50%] animate-ping ">
+          <ChevronDoubleLeft />
+        </div>
+      )}
     </div>
   );
 }
