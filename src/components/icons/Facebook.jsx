@@ -28,7 +28,7 @@ function Facebook({ ...props }) {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="#0062E0" />
-          <stop offset="1" stop-color="#19AFFF" />
+          <stop offset="1" stopColor="#19AFFF" />
         </linearGradient>
       </defs>
     </svg>
