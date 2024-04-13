@@ -2,8 +2,8 @@ import React from "react";
 
 function Dashboard() {
   return (
-    <div className="w-full h-screen">
-      <div className="bg-[#3D5CFF] text-white flex justify-between h-[180px] px-4 pt-6 relative">
+    <div className="w-full h-screen duration-300 transition-all">
+      <div className="bg-[#3D5CFF] text-white flex justify-between h-[180px] px-4 pt-6 relative w-full">
         <div>
           <h1 className="font-bold text-[24px]">Hi, Kristin</h1>
           <p className="text-[14px]">Let's start learning</p>
