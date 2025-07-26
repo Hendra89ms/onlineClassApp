@@ -1,9 +1,8 @@
 import CardHome from "./cardHome";
 import ProfileAccount from "./profile";
 
+
 function Dashboard() {
-
-
 
   return (
     <div className="w-full h-screen duration-300 transition-all">

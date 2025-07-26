@@ -12,8 +12,9 @@ import {
   Account,
   Course,
   Dashboard,
-  Message,
+  // Message,
 } from "../pages/dashboard/indexPage";
+import AllMessage from "../pages/messages";
 
 function RouterApp() {
   return (
@@ -23,7 +24,7 @@ function RouterApp() {
           <Route element={<Layout />}>
             <Route index path="dashboard" element={<Dashboard />} />
             <Route path="course" element={<Course />} />
-            <Route path="mesasge" element={<Message />} />
+            <Route path="mesasge" element={<AllMessage />} />
             <Route path="account" element={<Account />} />
           </Route>
 

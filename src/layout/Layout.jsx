@@ -5,11 +5,13 @@ import { dataNavLayout } from "./dataNav";
 function Layout() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    setActiveIndex(0);
-    navigate("/dashboard");
+    // setActiveIndex(0);
+    if (activeIndex === 0) {
+      navigate("/dashboard");
+    }
   }, []);
 
   const handlePath = (idx) => {
@@ -43,7 +45,7 @@ function Layout() {
         <Outlet />
       </div>
 
-      <div className="w-full flex gap-3 absolute bottom-0 mb-3 justify-center items-center select-none">
+      <div className="w-full flex gap-3 absolute bottom-0 mb-3 justify-center items-center select-none  bg-white z-[99px]">
         <div className="flex w-full justify-center h-[70px] gap-3">
           {dataNavLayout.map((item, index) => {
             const isActive = activeIndex === index;
@@ -56,16 +58,14 @@ function Layout() {
                   handlePath(index);
                 }}
                 key={index}
-                className={`w-full  px-3 h-full flex flex-col justify-between items-center cursor-pointer ${
-                  item.title === "Search" && "-mt-4 bg-white h-[90px] "
-                } `}
+                className={`w-full  px-3 h-full flex flex-col justify-between items-center cursor-pointer ${item.title === "Search" && "-mt-4 bg-white h-[90px] "
+                  } `}
               >
                 <div className={`${handleTopBlue(index)}`}></div>
                 <div
-                  className={`${
-                    item.title === "Search" &&
+                  className={`${item.title === "Search" &&
                     "bg-[#F5F7FF] h-[52px] w-[52px] flex justify-center items-center rounded-full"
-                  }`}
+                    }`}
                 >
                   {React.cloneElement(item.icon, { color: iconColor })}
                 </div>
