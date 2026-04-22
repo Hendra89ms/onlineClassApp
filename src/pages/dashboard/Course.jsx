@@ -6,6 +6,7 @@ import FramePainting from '../../components/imageSvg/framePainting'
 import NavChoiceCourse from './navChoice'
 
 function Course() {
+  
   return (
     <div className='mt-5' >
       <div className='w-full flex justify-between items-center' >
